@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Coffee Shop</title>
+
+</head>
+
+<body>
+
+<h1>Coffee Shop Menu</h1>
+
+  <table id="totals"></table>
+
+  <script>
+
+    beverages = ['mocha', 'latte', 'espresso', 'tea'];
+    prices = [3.99, 4.99, 2.99, 1.99];
+    taxes = [0.1, 0.2, 0.15, 0.05];
+
+
+    text = "<tr><th>Beverage</th><th>Price</th><th>Tax</th><th>Total</th></tr>";
+
+
+    for (let i = 0; i < beverages.length; i++) {
+      price = prices[i];
+      tax = taxes[i];
+      total = price + tax;
+
+
+      text += "<tr>";
+
+      text += "<td>" + beverages[i] + "</td>";
+      text += "<td>" + price + "</td>";
+      text += "<td>" + tax + "</td>";
+      text += "<td>" + total + "</td>";
+
+      text += "</tr>";
+    }
+
+    console.log(text)
+        
+
+    document.getElementById("totals").innerHTML = text;
+
+  </script>
+
+    <input type="number" id="boxA" placeholder="Enter first price">
+    <input type="number" id="boxB" placeholder="Enter second price">
+    <button onclick="addNumbers()">Get your total!</button>
+    <p id="result"></p>
+
+  <script>
+
+    function addNumbers() {
+    FirstValue = +document.getElementById("boxA").value;
+    SecondValue = +document.getElementById("boxB").value;
+    sum = FirstValue + SecondValue;
+
+    document.getElementById("result").textContent = "Your total is: " + sum;
+
+    console.log("Your total is: " + sum);
+
+  }
+
+  </script>
+
+
+</body>
+</html>
