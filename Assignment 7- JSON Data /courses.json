@@ -1,0 +1,42 @@
+[
+    {
+      "course_name": "Cloud Systems Computing",
+      "course_number": "CIS-24165",
+      "section": 10,
+      "CreditHours": 3,
+      "Instructor": "Eric Curley",
+      "GradeMode": "Standard Letter"
+    },
+    {
+      "course_name": "Principles of Marketing",
+      "course_number": "MKTG-25010",
+      "section": 600,
+      "CreditHours": 3,
+      "Instructor": "Haithem Zourrig",
+      "GradeMode": "Standard Letter"
+    },
+    {
+      "course_name": "Legal Environment of Business",
+      "course_number": "FIN-26074",
+      "section": 1,
+      "CreditHours": 3,
+      "Instructor": "Lois Beier",
+      "GradeMode": "Standard Letter"
+    },
+    {
+      "course_name": "Cloud Infrastructure and Applications",
+      "course_number": "CIS-24167",
+      "section": 1,
+      "CreditHours": 3,
+      "Instructor": "Austin Kwak",
+      "GradeMode": "Standard Letter"
+    }, 
+    {
+      "course_name": "Science of Human Nutrition",
+      "course_number": "NUTR-23511",
+      "section": 11,
+      "CreditHours": 3,
+      "Instructor": "Sarah Korzan",
+      "GradeMode": "Standard Letter"
+    }
+  ]
