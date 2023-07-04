@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Courses</title>
+
+</head>
+
+<body>
+
+  <table id="courses"></table>
+
+  <script>
+
+    fetch('https://raw.githubusercontent.com/YusurAlrawi/CloudComputing/main/Assignment%207-%20JSON%20Data%20/courses.json')
+    .then(response => response.json())
+    .then(data => processData(data));
+  
+      
+      function processData(data){
+      var obj = data;
+
+
+    text = "<tr><th>Course Name</th><th>Course Number</th><th>Section</th><th>Credit Hours</th><th>Instructor</th><th>Grade Mode</th></tr>";
+
+
+    for (let i = 0; i < obj.length; i++) {
+     
+      text += "<tr>";
+
+      text += "<td>" + obj[i].course_name + "</td>";
+      text += "<td>" + obj[i].course_number + "</td>";
+      text += "<td>" + obj[i].section + "</td>";
+      text += "<td>" + obj[i].CreditHours + "</td>";
+      text += "<td>" + obj[i].Instructor + "</td>";
+      text += "<td>" + obj[i].GradeMode + "</td>";
+
+      text += "</tr>";
+    }
+
+
+    console.log(text)
+        
+
+    document.getElementById("courses").innerHTML = text;
+      }
+      
+  </script>
+
+
+</body>
+</html>
