@@ -1,0 +1,26 @@
+[
+    {
+      "product_name": "Frozen Pineapple Passionfruit Lemonade",
+      "id": 1,
+      "size": "grande",
+      "price": 5.45,
+      "tax": 0.1,
+      "url": "pineapple.html"
+    },
+    {
+      "product_name": "Frozen Strawberry Açaí Lemonade",
+      "id": 2,
+      "size": "grande",
+      "price": 5.45,
+      "tax": 0.15,
+      "url": "strawberry.html"
+    },
+    {
+      "product_name": "Frozen Mango Dragonfruit Lemonade",
+      "id": 3,
+      "size": "grande",
+      "price": 5.45,
+      "tax": 0.2,
+      "url": "mango.html"
+    }
+  ]
