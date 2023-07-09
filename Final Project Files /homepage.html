@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Starbucks Summer Drinks</title>
+
+</head>
+
+<body>
+
+  <h1>New Starbucks Frozen Lemonade Refreshers </h1>
+
+  <table id="drinks"></table>
+
+  <script>
+
+    fetch('https://raw.githubusercontent.com/YusurAlrawi/CloudComputing/main/Final%20Project%20Files%20/products%20/products.json')
+    .then(response => response.json())
+    .then(data => processData(data));
+  
+      
+      function processData(data){
+      var obj = data;
+
+
+    text = "<tr><th>Drink</th><th>Size</th><th>Price</th><th>Tax</th><th>Total</th></tr>";
+
+
+    for (let i = 0; i < obj.length; i++) {
+   
+        let price = obj[i].price; 
+        let tax = obj[i].tax; 
+        let Total = price + tax;
+
+      text += "<tr>";
+
+      text = text + "<td>" + "<a href= 'products/" + obj[i].url + "'>" + obj[i].product_name + "</a>" + "</td>" 
+      text += "<td>" + obj[i].size + "</td>";
+      text += "<td>" + price + "</td>";
+      text += "<td>" + tax + "</td>";
+      text += "<td>" + Total.toPrecision(3) + "</td>";
+
+      text += "</tr>";
+    }
+
+
+    console.log(text)
+        
+
+    document.getElementById("drinks").innerHTML = text;
+      }
+      
+  </script>
+
+
+</body>
+</html>
