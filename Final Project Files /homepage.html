@@ -4,9 +4,159 @@
 
   <title>Starbucks Summer Drinks</title>
 
+  <style>
+    body {
+      font-family: garamond, serif;
+      background-color: mintcream;
+      padding: 15px;
+    }
+
+    h1 {
+      color: darkseagreen;
+      text-align: center;
+      font-size: 48px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    th, td {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    tr:nth-child(1) {
+    background-color: darkseagreen; 
+    }
+
+    tr:nth-child(2) {
+    background-color: lightyellow; 
+    }
+
+     tr:nth-child(3) {
+    background-color: lavenderblush; 
+    }
+
+    tr:nth-child(4) {
+    background-color: lavender; 
+    }
+
+    tr:hover {
+      background-color: #e6e6e6;
+    }
+
+    a {
+      color: olivedrab;
+      text-decoration: none;
+    }
+
+    img.drinks {
+        max-width: 450px;
+        max-height: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 8px;
+    }
+
+    img.logo {
+        max-width: 200px;
+        max-height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+    }
+   
+    .topnav {
+    background-color:black;
+    overflow: hidden;
+    }
+
+
+    .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 18px;
+    }
+
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color:#e6e6e6; ;
+    }
+
+
+    .topnav a.active {
+    background-color: darkseagreen;
+    color: white;
+    }
+
+    h2 {
+      color: darkseagreen;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: darkseagreen;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ddd;
+    }
+    </style>
+
 </head>
 
 <body>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="https://stories.starbucks.com/stories/2023/starbucks-unveils-new-frozen-lemonade-drinks-for-the-summer/">Article</a>
+        <a href="https://www.starbucks.com/store-locator">Find a store</a>
+      </div>
+
+      <a href="https://www.starbucks.com"><img src="https://1000logos.net/wp-content/uploads/2023/04/Starbucks-logo.png" alt="Starbucks Logo" class="logo"> </a>
 
   <h1>New Starbucks Frozen Lemonade Refreshers </h1>
 
@@ -34,7 +184,7 @@
 
       text += "<tr>";
 
-      text = text + "<td>" + "<a href= 'products/" + obj[i].url + "'>" + obj[i].product_name + "</a>" + "</td>" 
+      text = text + "<td>" + "<a href= 'products%20/" + obj[i].url + "'>" + obj[i].product_name + "</a>" + "</td>" 
       text += "<td>" + obj[i].size + "</td>";
       text += "<td>" + price + "</td>";
       text += "<td>" + tax + "</td>";
@@ -52,6 +202,17 @@
       
   </script>
 
+    <img src="https://s.yimg.com/ny/api/res/1.2/b5oP5H2KlkG7C91dU3Iy5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTk2MDtjZj13ZWJw/https://media.zenfs.com/en/insider_articles_922/4b859fc3f03b768a674235cdb2662fc8" alt="Starbucks Summer Drinks" class="drinks" >
+    
+    <h2>Sign up to discover the newest Starbucks drinks!</h2>
+    <form>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <input type="submit">
+    </form>
 
 </body>
 </html>
